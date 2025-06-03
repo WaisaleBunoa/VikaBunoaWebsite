@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and external resources -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+  <title>Contact Me</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+  <script defer src="script.js"></script> <!-- Link to the external JavaScript file -->
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    <h1>Contact Me</h1> <!-- Main heading -->
+    <p>Have a question or want to connect? Send me a message below.</p> <!-- Brief description -->
+  </header>
+
+  <!-- Contact form section -->
+  <section class="contact-form">
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <!-- Navigation links -->
+        <li><a href="index.html">Home</a></li> <!-- Link to the Home page -->
+        <li><a href="about.html">About</a></li> <!-- Link to the About page -->
+        <li><a href="projects.html">Projects</a></li> <!-- Link to the Projects page -->
+        <li><a href="contact.html">Contact</a></li> <!-- Link to the Contact page -->
+      </ul>
+      
+      <!-- Theme switcher -->
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle"> <!-- Checkbox for toggling themes -->
+        <label for="themeToggle" class="switch-label">
+          <span class="icon sun">☀️</span> <!-- Sun icon for light mode -->
+          <span class="icon moon">🌙</span> <!-- Moon icon for dark mode -->
+        </label>
+      </div>
+    </nav>
+
+    <!-- Contact form -->
+    <form action="#" method="post" id="contactForm">
+      <!-- Name input field -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required> <!-- Required field for name -->
+
+      <!-- Email input field -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required> <!-- Required field for email -->
+
+      <!-- Message textarea -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea> <!-- Required field for message -->
+
+      <!-- Submit button -->
+      <button type="submit">Send Message</button> <!-- Button to submit the form -->
+    </form>
+
+    <!-- Form status messages (hidden by default) -->
+    <div id="formStatus" style="display:none;">
+      <span class="spinner" style="display:none;">⏳</span> <!-- Spinner icon -->
+      <span class="sent-message" style="display:none;"></span> <!-- Message displayed after form submission -->
+    </div>
+  </section>
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to top">↑</button> <!-- Button to scroll back to the top -->
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2025 [Your Name]</p> <!-- Copyright information -->
+  </footer>
+
+  <!-- JavaScript for handling form submission -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent default form submission behavior
+
+      const form = this; // Reference to the form element
+      const formStatus = document.getElementById("formStatus"); // Status message container
+      const spinner = formStatus.querySelector(".spinner"); // Spinner element
+      const sent = formStatus.querySelector(".sent-message"); // Sent message element
+
+      // Display the status container and spinner
+      formStatus.style.display = "block";
+      spinner.style.display = "inline-block";
+      sent.style.display = "none";
+
+      // Send the form data using Fetch API
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form), // Form data
+        headers: { 'Accept': 'application/json' } // Accept JSON response
+      }).then(response => {
+        spinner.style.display = "none"; // Hide spinner
+        if (response.ok) {
+          // If the response is successful
+          sent.style.display = "inline-block";
+          form.reset(); // Reset the form fields
+        } else {
+          // If there is an error
+          sent.style.color = "red";
+          sent.textContent = "✖ Error sending message";
+          sent.style.display = "inline-block";
+        }
+      }).catch(error => {
+        // Handle network or other errors
+        spinner.style.display = "none";
+        sent.style.color = "red";
+        sent.textContent = "✖ Error sending message";
+        sent.style.display = "inline-block";
+      });
+    });
+  </script>
+</body>
+</html>

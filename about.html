@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and external resources -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+  <title>About Me</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+  <script defer src="script.js"></script> <!-- Link to the external JavaScript file, loaded after the HTML -->
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    <h1>About Me</h1> <!-- Main heading -->
+    <p>Learn more about my background, education, and skills.</p> <!-- Brief description -->
+  </header>
+
+  <!-- Main content section -->
+  <section class="about-content">
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <!-- Navigation links -->
+        <li><a href="index.html">Home</a></li> <!-- Link to the Home page -->
+        <li><a href="about.html">About</a></li> <!-- Link to the About page -->
+        <li><a href="projects.html">Projects</a></li> <!-- Link to the Projects page -->
+        <li><a href="contact.html">Contact</a></li> <!-- Link to the Contact page -->
+      </ul>
+      
+      <!-- Theme switcher -->
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle"> <!-- Checkbox for toggling themes -->
+        <label for="themeToggle" class="switch-label">
+          <span class="icon sun">☀️</span> <!-- Sun icon for light mode -->
+          <span class="icon moon">🌙</span> <!-- Moon icon for dark mode -->
+        </label>
+      </div>
+    </nav>
+
+    <!-- Background and interests section -->
+    <h2>Background & Interests</h2>
+    <p>I am a dedicated student with a strong passion for [your interests]. I enjoy [mention hobbies] and strive to grow and learn.</p> <!-- Personal background and hobbies -->
+
+    <!-- Education timeline section -->
+    <h2>Education Timeline</h2>
+    <ul class="timeline">
+      <li>
+        <strong>2021 - Present:</strong> Nasinu Muslim School
+        <ul class="sub-timeline">
+          <li>Year Nine to Year Thirteen</li>
+        </ul>
+      </li> <!-- Current education -->
+      <li>
+        <strong>2012 - 2020:</strong> Saint Joseph Primary School
+        <ul class="sub-timeline">
+          <li>Year One to Year Eight</li>
+        </ul>
+      </li> <!-- Previous education -->
+    </ul>
+
+    <!-- Accomplishments timeline section -->
+    <h2>Accomplishments Timeline</h2>
+    <ul class="timeline">
+      <li>
+        <strong>Year 1 - 7:</strong> Class Captain
+      </li>
+      <li>
+        <strong>Year 8:</strong> School Prefect
+      </li>
+      <li>
+        <strong>Year 11:</strong> College Prefect
+      </li>
+      <li>
+        <strong>Year 12 &amp; 13:</strong> Year Monitor
+      </li>
+    </ul>
+
+    <!-- Awards Badges Timeline -->
+    <h2>Awards & Badges</h2>
+    <ul class="timeline">
+      <li>
+        <span class="badge badge-silver">🥈 Second Place</span>
+        <strong>Year 1 - 8</strong>
+      </li>
+      <li>
+        <span class="badge badge-gold">🥇 First Place</span>
+        <strong>Year 9</strong>
+      </li>
+      <li>
+        <span class="badge badge-silver">🥈 Second Place</span>
+        <strong>Year 10</strong>
+      </li>
+      <li>
+        <span class="badge badge-fourth">4️⃣ Fourth Place</span>
+        <strong>Year 11</strong>
+      </li>
+      <li>
+        <span class="badge badge-bronze">🥉 Third Place</span>
+        <strong>Year 12</strong>
+      </li>
+    </ul>
+
+    <!-- Skills section -->
+    <h2>Skills</h2>
+    <div class="skills">
+      <!-- HTML skill progress -->
+      <div class="skill">
+        <label for="html-skill">HTML</label>
+        <progress id="html-skill" value="60" max="100"></progress> <!-- HTML progress bar -->
+        <span>60%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- CSS skill progress -->
+      <div class="skill">
+        <label for="css-skill">CSS</label>
+        <progress id="css-skill" value="50" max="100"></progress> <!-- CSS progress bar -->
+        <span>50%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- Adaptability skill progress -->
+      <div class="skill">
+        <label for="adaptability-skill">Adaptability</label>
+        <progress id="adaptability-skill" value="90" max="100"></progress> <!-- Adaptability progress bar -->
+        <span>90%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- Communication skills progress -->
+      <div class="skill">
+        <label for="communication-skill">Communication Skills</label>
+        <progress id="communication-skill" value="95" max="100"></progress> <!-- Communication skills progress bar -->
+        <span>95%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- Critical thinking skills progress -->
+      <div class="skill">
+        <label for="critical-thinking-skill">Critical Thinking Skills</label>
+        <progress id="critical-thinking-skill" value="70" max="100"></progress> <!-- Critical thinking skills progress bar -->
+        <span>70%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- Interpersonal skills progress -->
+      <div class="skill">
+        <label for="interpersonal-skill">Interpersonal Skills</label>
+        <progress id="interpersonal-skill" value="80" max="100"></progress> <!-- Interpersonal skills progress bar -->
+        <span>80%</span> <!-- Percentage label -->
+      </div>
+
+      <!-- Presentation skills progress -->
+      <div class="skill">
+        <label for="presentation-skill">Presentation Skills</label>
+        <progress id="presentation-skill" value="100" max="100"></progress> <!-- Presentation skills progress bar -->
+        <span>100%</span> <!-- Percentage label -->
+      </div>
+    </div>
+
+
+    </div>
+  </section>
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2025 [Your Name]</p> <!-- Copyright information -->
+  </footer>
+</body>
+</html>
